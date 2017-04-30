@@ -42,7 +42,7 @@ body {
     font-size: 5em;
     font-weight: 300;
     line-height: 1.4;
-    opacity: 0;
+    opacity: 1;
 }
 
 .homeTitle .line {
@@ -51,8 +51,8 @@ body {
     vertical-align: top;
 }
 
-.homeMenu.mb {
-    display:none;
+.homeMenuInner {
+    opacity:0;
 }
 
 .homeBox .homeMenu {
@@ -285,8 +285,9 @@ body {
         font-size: 2.5em;
     }
     .homeBox {
-        padding: 12px;
+        padding: 5px;
     }
+    
     .homeMenuIcon {
         background-image: url(plus-icon.png);
         background-size:25px 25px;
@@ -308,21 +309,41 @@ body {
     .homeMenu.dt {
         display: none;
     }
-    .homeMenu {
+    .homeMenu.mb {
+        position: absolute;
+        left: 0;
+        right: 0;
         font-size: 1em;
         font-weight: 100;
         z-index: 3;
         opacity:0;
+        margin: 30px auto;
+        background-color: rgba(0,0,0,0.4);
     }
     .homeMenuInner {
-        background-color: rgba(0,0,0,0.4);
+        text-align:center;
         position: absolute;
         left: 0;
         right: 0;
         top: 164px;
         z-index:100;
-        padding: 40px 60px;
+        transition:0.5s;
+        opacity:0;
+        margin: auto;
     }
     
+    .homeMenuInner.show {
+        transition:0.5s;
+        opacity:1;
+    }
+    
+    .homeTitle {
+        transition:0.5s;
+    }
+    
+    .homeTitle.hide {
+        transition:0.5s;
+        opacity:0;
+    }
     
 }

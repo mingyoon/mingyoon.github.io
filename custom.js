@@ -4,10 +4,12 @@ $(document).ready(function(){
     $('.homeMenuIcon').delay(900).animate({'opacity':'1'},{ducration:1000});
     $('.homeMenuIcon').click(function(){
         $(this).toggleClass('active',600);
+        $('.homeMenuInner').toggleClass('show',600);
+        $('.homeTitle').toggleClass('hide',600);
     });
     
     //opeing event
-    $('.homeTitle').delay(400).animate({'opacity':'1'},{duration:1000});
+    // $('.homeTitle').delay(400).animate({'opacity':'1'},{duration:1000});
     $('.homeMenu').each(function(index){
         $(this).delay(450*index).animate({
             'opacity': '1'
