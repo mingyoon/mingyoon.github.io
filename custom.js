@@ -1,7 +1,8 @@
 /*global $*/
 $(document).ready(function(){
+    
     //mobile event
-    $('.homeMenuIcon').delay(900).animate({'opacity':'1'},{ducration:1000});
+    $('.homeMenuIcon').delay(900).animate({'opacity':'1'},{duration:1000});
     $('.homeMenuIcon').click(function(){
         $(this).toggleClass('active',600);
         $('.homeMenuInner').toggleClass('show',600);
@@ -78,6 +79,10 @@ $(document).ready(function(){
                 'width': '14em'
             },{duration:1200});
         });
+        
+        //mobile menu click event
+        $('.homeMenuIcon').fadeOut(600);
+        $('.homeMenuInner').animate({'opacity':'0'},{duration:600});
     });
     
     // backbtn click event
@@ -95,6 +100,12 @@ $(document).ready(function(){
         $('.round').animate({'width':'0px','height':'0px'},{duration:600});
         $('.line').animate({'width':'0px'},{duration:600});
         $('.nameInner').animate({'opacity':'0'},{duration:600});
+        
+        //mobile backbtn click event
+        $('.homeMenuIcon').fadeIn(600).removeClass('active');
+        $('.homeMenuInner').animate({'opacity':'1'},{duration:100});
+        $('.homeMenuInner').removeClass('show',600);
+        $('.homeTitle').removeClass('hide');
     });
     
     //portfolioMenu hover event

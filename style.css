@@ -18,7 +18,7 @@ li {
 body {
     background-image: url(home_bg2.png);
     background-size: cover;
-    padding:22px;
+    padding:2%;
     font-family: 'Roboto Slab', serif;
 }
 
@@ -27,7 +27,7 @@ body {
 /*}*/
 
 .homeBox {
-    padding: 8px;
+    /*padding: 8px;*/
     text-align:center;
     color:white;
     position: relative;
@@ -38,7 +38,7 @@ body {
 }
 
 .homeTitle {
-    margin:190px auto;
+    margin:15% auto;
     font-size: 5em;
     font-weight: 300;
     line-height: 1.4;
@@ -313,12 +313,13 @@ body {
         position: absolute;
         left: 0;
         right: 0;
-        font-size: 1em;
+        font-size: 1.8em;
+        line-height: 50px;
         font-weight: 100;
         z-index: 3;
         opacity:0;
-        margin: 30px auto;
-        background-color: rgba(0,0,0,0.4);
+        margin: 60px auto;
+        display:block;
     }
     .homeMenuInner {
         text-align:center;
@@ -329,7 +330,10 @@ body {
         z-index:100;
         transition:0.5s;
         opacity:0;
-        margin: auto;
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        background-color: rgba(0,0,0,0.4);
     }
     
     .homeMenuInner.show {
