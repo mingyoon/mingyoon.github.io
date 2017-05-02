@@ -34,6 +34,10 @@ body {
     position: relative;
 }
 
+.homeMenuInner {
+    display:none;
+}
+
 .homeBoxInner {
     border:1px solid #fff;
 }
